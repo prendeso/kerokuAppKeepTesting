@@ -1,11 +1,11 @@
 angular.module('listings', []).factory('Listings', function($http) {
   var methods = {
     getAll: function() {
-      return $http.get('http://localhost:8080/api/listings');
+      return $http.get('http://bootcamp5.herokuapp.com/api/listings');
     },
 	
 	create: function(listing) {
-	  return $http.post('http://localhost:8080/api/listings', listing);
+	  return $http.post('http://bootcamp5.herokuapp.com/api/listings', listing);
     }, 
 
     delete: function(id) {
@@ -13,7 +13,7 @@ angular.module('listings', []).factory('Listings', function($http) {
         return result of HTTP delete method
        */
 	   //return $http.delete('http://localhost:8080/api/listings/', id);
-        return $http.delete('http://localhost:8080/api/listings/' + id, id );
+        return $http.delete('http://bootcamp5.herokuapp.com/api/listings/' + id, id );
 
     }
   };
