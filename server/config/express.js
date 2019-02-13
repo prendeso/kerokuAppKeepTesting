@@ -49,7 +49,10 @@ module.exports.init = function() {
     //res.sendFile('../index.html', {root: __dirname});
     res.sendFile('/Users/prendeso/Documents/GitHub/bootcampassignment-4-expressjs-prendeso/client/index.html');
   });*/
-  app.use('/*',express.static('../../client/index.html'));
+  app.get('/*', function (req, res) {
+    res.sendFile('index.html', {root: 'client'});
+    //res.sendFile('/Users/prendeso/Documents/GitHub/bootcampassignment-4-expressjs-prendeso/client/index.html');
+  });
 
   return app;
 };
